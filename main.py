@@ -3,9 +3,11 @@ def main():
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     char_num = get_char_num(text)
-    print(f"{num_words} words found in the document")
-    print(char_num)
-
+    print("Report:")
+    print(f"Number of words: {num_words}")
+    print("Character frequency:")
+    for char, freq in char_num.items():
+        print(f"{char}: {freq}")
 
 def get_num_words(text):
     words = text.split()
